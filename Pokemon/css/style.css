@@ -1,0 +1,7 @@
+body {
+    background: url(../img/1@2x.jpg) no-repeat center;
+    background-size: contain;
+    width: 10vw;
+    height: 100vh;
+    overflow: hidden;
+}
