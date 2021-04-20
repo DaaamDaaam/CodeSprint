@@ -5,6 +5,8 @@ body {
     height: 100vh;
     font-family: Poppins;
     box-sizing: border-box;
+    text-align: center;
+    margin: 0 auto;
 }
 
 #setsList {
@@ -27,6 +29,13 @@ body {
 
   #choicePokemon {
     display: none;
+    flex-wrap: wrap;
     width: 100%;
     height: 100vh;
+    justify-content: center;
+  }
+
+  .pokemon-card {
+    width: 15%;
+    padding: 20px;
   }
