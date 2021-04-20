@@ -15,3 +15,4 @@ fetch(`${API_URL}sets/`)
         `
         console.log(setHTML)
     })
+t(t)
