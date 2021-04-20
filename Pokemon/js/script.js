@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const setsListHTML = document.getElementById("setsList");
       const choicePokemonHTML = document.getElementById("choicePokemon");
       let userPokemonChoices = [];
@@ -18,17 +17,17 @@ const setsListHTML = document.getElementById("setsList");
               setsListHTML.remove();
               choicePokemonHTML.style.display = "flex";
               fetch(
-                `https://api.pokemontcg.io/v2/cards?q=supertype:pokemon set.id:${set.id}`
+                `https://api.pokemontcg.io/v2/cards?q= set.id:${set.id}`
               )
                 .then((response) => response.json())
                 .then((data) => {
                   let pokemons = data.data;
-                  //   console.log(pokemons);
-                  //radnom
+                  //console.log(pokemons);
+                  //random
                   console.log(pokemons[0]);
-                  showPokemon(pokemons[0]);
-                  showPokemon(pokemons[5]);
-                  showPokemon(pokemons[8]);
+                  for(let i = 0; i < 63; i++) {
+                    showPokemon(pokemons[i]);
+                  }
                 });
             });
           });
@@ -37,7 +36,7 @@ const setsListHTML = document.getElementById("setsList");
         let card = document.createElement("div");
         card.className = "pokemon-card";
         card.innerHTML = `
-            <img src="${pokemon.images.small}" alt=""/>
+            <img src="${pokemon.images.large}" alt=""/>
         `;
         card.addEventListener("click", function () {
           userPokemonChoices.push(pokemon);
@@ -45,23 +44,3 @@ const setsListHTML = document.getElementById("setsList");
         });
         choicePokemonHTML.append(card);
       }
-=======
-const API_URL = "https://api.pokemontcg.io/v2/"
-
-const form = document.getElementById("searchForm")
-
-fetch(`${API_URL}sets/`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-
-        let setHTML = document.getElementById("selection-set")
-        
-        setHTML.innerHTML = `
-            <p>${data.name}</p>
-            <img src="${data.images}" alt=""/>
-        `
-        console.log(setHTML)
-    })
-t(t)
->>>>>>> fc002dc623a9e479609340d1d3d3a04502f6aa8d
