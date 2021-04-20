@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const setsListHTML = document.getElementById("setsList");
       const choicePokemonHTML = document.getElementById("choicePokemon");
       let userPokemonChoices = [];
@@ -44,3 +45,23 @@ const setsListHTML = document.getElementById("setsList");
         });
         choicePokemonHTML.append(card);
       }
+=======
+const API_URL = "https://api.pokemontcg.io/v2/"
+
+const form = document.getElementById("searchForm")
+
+fetch(`${API_URL}sets/`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+
+        let setHTML = document.getElementById("selection-set")
+        
+        setHTML.innerHTML = `
+            <p>${data.name}</p>
+            <img src="${data.images}" alt=""/>
+        `
+        console.log(setHTML)
+    })
+t(t)
+>>>>>>> fc002dc623a9e479609340d1d3d3a04502f6aa8d
