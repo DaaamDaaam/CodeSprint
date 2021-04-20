@@ -4,19 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon | Choisir un set de booster</title>
+    <title>Pokémon | Boosters</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
 <body>
-    <div>
+
+    <!-------- HEADER -------->
+
+    <div class="header" id="top">
+        <img class="logo" src="img/1200px-International_Pokémon_logo.svg.png">
+        <div class="menuHeader">
+            <a href="set.html">Card Sets</a>
+            <a href="#">Card prices</a>
+        </div>
+    </div>
+
+    
+    <!-------- BOUTON RETOUR -------->
+
+    <a href="set.html"><div class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
+
+
+    <!-------- LISTE DE SETS & AFFICHAGE CARTES -------->
+
+    <div class='containerSetCards'>
         <h1>Ouverture de booster</h1>
         <h2>Choisissez une série de booster</h2>
+    
+        <div id="setsList"></div>
+        <div id="choicePokemon"></div>
     </div>
 
-    <div id="setsList"></div>
-
-    <div id="choicePokemon">
-    </div>
+    <a href='#top' class="backtotop">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
 
     <script src="js/script.js"></script>
 </body>
