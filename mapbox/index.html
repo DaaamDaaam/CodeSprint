@@ -36,7 +36,7 @@
       fetch(
         "https://opendata.bordeaux-metropole.fr/api/records/1.0/search/?dataset=bor_airejeux&q=&facet=age_min&facet=age_max"
       )
-        .then((resonse) => resonse.json())
+        .then((response) => response.json())
         .then((data) => {
           data.records.map((item) => {
             console.log(item.geometry.coordinates);
