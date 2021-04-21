@@ -228,6 +228,14 @@ img {
   width: 15vw;
 }
 
+/* ---------- PRIX ---------- */
+
+.prix {
+  width: 60%;
+  text-align: center;
+}
+
+
 /* ---------- BACK TO TOP ---------- */
 
 .backtotop {

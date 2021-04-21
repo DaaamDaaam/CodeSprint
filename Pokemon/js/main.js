@@ -10,21 +10,43 @@ submitHTML.addEventListener('click', function(event){
     .then(response => response.json())
     .then(data => {
         data.data.map(pokemon => {
-            let price = ""
-            console.log(pokemon);
-            if(pokemon.tcgplayer){
+
+            let priceMin = ""
+            if(pokemon.tcgplayer) {
               if(pokemon.tcgplayer.prices.holofoil){
-                price = pokemon.tcgplayer.prices.holofoil.high
+                priceMin = "low : " + pokemon.tcgplayer.prices.holofoil.low + "$"
               } else if(pokemon.tcgplayer.prices.stEditionHolofoil){
-                  price = pokemon.tcgplayer.prices.stEditionHolofoil.high
+                priceMin = "low : " + pokemon.tcgplayer.prices.stEditionHolofoil.low + "$"
+              }
+            }
+
+            let priceMoy = ""
+            if(pokemon.tcgplayer) {
+              if(pokemon.tcgplayer.prices.holofoil){
+                priceMoy = "moy : " + pokemon.tcgplayer.prices.holofoil.mid + "$"
+              } else if(pokemon.tcgplayer.prices.stEditionHolofoil){
+                priceMoy = "moy : " + pokemon.tcgplayer.prices.stEditionHolofoil.mid + "$"
+              }
+            }
+
+            let priceMax = ""
+            if(pokemon.tcgplayer) {
+              if(pokemon.tcgplayer.prices.holofoil){
+                priceMax = "high : " + pokemon.tcgplayer.prices.holofoil.high + "$"
+              } else if(pokemon.tcgplayer.prices.stEditionHolofoil){
+                priceMax = "high : " + pokemon.tcgplayer.prices.stEditionHolofoil.high + "$"
               }
             }
 
             const pokemonCard = document.createElement("div");
-            pokemonCard.className = "col-md-4";
+            pokemonCard.className = "col-md-4 justify-content-center";
             pokemonCard.innerHTML = `
                 <img src="${pokemon.images.large}" class='pkmn-card'>
-                <p>${price}</p>
+                <div class="prix">
+                  <p>${priceMin}</p>
+                  <p>${priceMoy}</p>
+                  <p>${priceMax}</p>
+                </div>
             `
             cardContainerHTML.append(pokemonCard)
         })
