@@ -23,8 +23,7 @@ fetch("https://api.pokemontcg.io/v2/sets/")
           .then((response) => response.json())
           .then((data) => {
             let pokemons = data.data;
-            
-            var nbrCartesAleatoire = entierAleatoire(1, );
+
             console.log(pokemons[0]);
             
             for(let i = 0; i < 63; i++) {
@@ -35,10 +34,6 @@ fetch("https://api.pokemontcg.io/v2/sets/")
       });
     });
   });
-
-function entierAleatoire(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 function showPokemon(pokemon) {
 

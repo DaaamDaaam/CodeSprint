@@ -160,7 +160,7 @@ img {
   display: grid;
   grid: auto-flow / 1fr 1fr 1fr 1fr;
   grid-template-columns: 4;
-  width: 99vw;
+  width: 100%;
 }
 
 .containerSetCards2 {
@@ -194,7 +194,15 @@ img {
 }
 
 .titres {
-text-align: center;
+  text-align: center;
+}
+
+.pokemon-card-booster {
+  width: 100vh;
+}
+
+.pokemon-card-booster > img {
+  width: 20vw;
 }
 
 /* ---------- BACK TO TOP ---------- */

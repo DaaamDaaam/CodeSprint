@@ -25,20 +25,26 @@ fetch("https://api.pokemontcg.io/v2/sets/")
           .then((data) => {
             let pokemons = data.data;
             //random
-            console.log(pokemons[0]);
-            
-            showPokemon(pokemons[0]);
+            console.log(pokemons.lenght);
+
+            var nbrCartesAleatoire = entierAleatoire(1, 70);
+
+            showPokemon(pokemons[nbrCartesAleatoire]);
             
           });
       });
     });
   });
 
+function entierAleatoire(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function showPokemon(pokemon) {
 
   let card = document.createElement("div");
 
-  card.className = "pokemon-card";
+  card.className = "pokemon-card-booster";
   card.innerHTML = `<img src="${pokemon.images.large}" alt=""/>`;
 
   card.addEventListener("click", function () {
