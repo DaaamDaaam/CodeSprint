@@ -25,8 +25,11 @@ fetch("https://api.pokemontcg.io/v2/sets/")
             let pokemons = data.data;
 
             console.log(pokemons[0]);
+
+            let nbrCartes = set.total.length;
+            console.log(nbrCartes)
             
-            for(let i = 0; i < 63; i++) {
+            for(let i = 0; i < 70; i++) {
               showPokemon(pokemons[i]);
             }
             
