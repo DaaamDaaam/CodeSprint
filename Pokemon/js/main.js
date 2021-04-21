@@ -1,18 +1,32 @@
-$("#submit").on("click", function(event) {
-  $("#card-container").empty();
-  event.preventDefault();
-  var pokemon = $("#search")
-    .val()
-    .trim();
+const submitHTML = document.getElementById('submit')
 
-  $.ajax({
-    method: "GET",
-    url: "https://api.pokemontcg.io/v1/cards?name=" + pokemon
-  }).then(function(response) {
-    for (var i = 0; i < response.cards.length; i++) {
-      var pokemonCard = $("<img class='pkmn-card'>");
-      pokemonCard.attr("src", response.cards[i].imageUrlHiRes);
-      $("#card-container").append(pokemonCard);
-    }
-  });
-});
+submitHTML.addEventListener('click', function(event){
+    event.preventDefault();
+    const cardContainerHTML = document.getElementById('card-container')
+    const searchHTML = document.getElementById('search')
+    const searchValue = searchHTML.value.trim()
+
+    fetch(`https://api.pokemontcg.io/v2/cards?q=supertype:pokemon name:${searchValue}`)
+    .then(response => response.json())
+    .then(data => {
+        data.data.map(pokemon => {
+            let price = ""
+            console.log(pokemon);
+            if(pokemon.tcgplayer){
+              if(pokemon.tcgplayer.prices.holofoil){
+                price = pokemon.tcgplayer.prices.holofoil.high
+              } else if(pokemon.tcgplayer.prices.stEditionHolofoil){
+                  price = pokemon.tcgplayer.prices.stEditionHolofoil.high
+              }
+            }
+
+            const pokemonCard = document.createElement("div");
+            pokemonCard.className = "col-md-4";
+            pokemonCard.innerHTML = `
+                <img src="${pokemon.images.large}" class='pkmn-card'>
+                <p>${price}</p>
+            `
+            cardContainerHTML.append(pokemonCard)
+        })
+    })
+})

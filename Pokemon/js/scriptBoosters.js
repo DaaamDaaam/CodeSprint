@@ -1,6 +1,7 @@
 const setsListHTML = document.getElementById("setsList2");
 const choicePokemonHTML = document.getElementById("choicePokemon");
 let userPokemonChoices = [];
+var pokemons = [];
 
 fetch("https://api.pokemontcg.io/v2/sets/")
 
@@ -23,14 +24,17 @@ fetch("https://api.pokemontcg.io/v2/sets/")
         fetch(`https://api.pokemontcg.io/v2/cards?q= set.id:${set.id}`)
           .then((response) => response.json())
           .then((data) => {
-            let pokemons = data.data;
-            //random
+            pokemons = data.data;
             console.log(pokemons.lenght);
 
-            var nbrCartesAleatoire = entierAleatoire(1, 70);
+            let nbrCartes = set.total;
+            console.log(nbrCartes)
 
-            showPokemon(pokemons[nbrCartesAleatoire]);
-            
+            for(let i = 0; i < 10; i++) {
+              var nbrCartesAleatoire = entierAleatoire(0, nbrCartes);
+              showPokemon(pokemons[nbrCartesAleatoire]);
+            }
+
           });
       });
     });
@@ -50,6 +54,8 @@ function showPokemon(pokemon) {
   card.addEventListener("click", function () {
     userPokemonChoices.push(pokemon);
     console.log(userPokemonChoices);
+
+    showPokemon(pokemons[nbrCartesAleatoire]);
   });
 
   choicePokemonHTML.append(card);

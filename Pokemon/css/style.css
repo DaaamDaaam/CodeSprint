@@ -11,7 +11,11 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
 }
 
 a {
@@ -22,12 +26,11 @@ a {
 /* ---------- HEADER ---------- */
 
 .header {
-  background-color: #242424;
+  background-color: #710D1C;
   color: white;
-  padding: 10px 5vw;
+  padding: 15px 5vw;
   display: flex;
   justify-content: space-between;
-  
 }
 
 .logo {
@@ -214,14 +217,15 @@ img {
 
 .titres {
   text-align: center;
+  margin-top: -50px;
 }
 
 .pokemon-card-booster {
-  width: 100vh;
+  padding: 10px;
 }
 
 .pokemon-card-booster > img {
-  width: 20vw;
+  width: 15vw;
 }
 
 /* ---------- BACK TO TOP ---------- */
