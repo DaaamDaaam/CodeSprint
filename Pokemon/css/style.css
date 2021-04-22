@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* ---------- GÉNÉRAL ---------- */
+html {
+  background-color: #FFFDF0;
+}
 
 body {
   width: 100vw;
@@ -8,7 +11,9 @@ body {
   font-family: Poppins;
   margin: 0;
   overflow-x: hidden;
+  background: url("../img/fond1.jpg") no-repeat;
 }
+
 
 h1 {
   font-size: 1.5em;
@@ -38,7 +43,7 @@ a {
 }
 
 .menuHeader {
-  width: 30vw;
+  width: 40vw;
   display: flex;
   justify-content: space-around;
 }
@@ -85,6 +90,19 @@ a {
 .formRecherche {
   display: flex;
   justify-content: center;
+  
+}
+
+.formRechercheBar {
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0);
+  padding: 5px;
+  border: solid 1px rgb(200,200,200);
+}
+
+.formRechercheBar::placeholder {
+  color:rgb(200,200,200);
+  padding-left: 10px;
 }
 
 /* ---------- SETS DE CARTES ---------- */
@@ -217,14 +235,15 @@ img {
 
 .setButton {
   display: flex;
-  background-color: rgb(230,230,230);
+  background-color: rgb(40,40,40);
+  color: white;
   border-radius: 10px;
   margin: 10px;
   padding: 10px;
 }
 
 .setButton:hover {
-  background-color: rgb(200,200,200);
+  background-color: rgb(60,60,60);
   cursor: pointer;
 }
 
@@ -258,4 +277,30 @@ img {
   right: 30px;
   color: #242424;
   opacity: 0.5;
+}
+
+/* ---------- DARK MODE ---------- */
+
+.btnToggleDarkMode {
+ position: fixed;
+ bottom: 20px;
+ left: 20px;
+ background-color: #F7B42D;
+ border: none;
+ padding: 10px 20px;
+ border-radius: 50px;
+ font-size: 12px;
+}
+
+.dark-mode-html {
+  background-color: black;
+}
+
+.dark-mode-body {
+  color: white;
+  background: url("../img/fond2.png") no-repeat center;
+}
+
+.dark-mode-retour {
+  color: white;
 }

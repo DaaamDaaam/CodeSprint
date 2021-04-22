@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     
 </head>
-<body>
+<body id="body">
 
     <!-------- HEADER -------->
 
@@ -19,31 +19,32 @@
             <a href="set.html">Card Sets</a>
             <a href="openbooster.html">Open Boosters</a>
             <a href="cardPrice.html">Card prices</a>
+            <a href="stats.html">Statistics</a>
         </div>
     </div>
 
     
     <!-------- BOUTON RETOUR -------->
 
-    <a href="openbooster.html"><div class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
+    <a href="openbooster.html"><div id="retour" class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
 
 
     <!-------- LISTE DE SETS & AFFICHAGE CARTES -------->
 
     <div class="titres">
-        <h1>Ouverture de booster</h1>
-        <h2>Choisissez une série de booster</h2>
+        <h1>Statistiques</h1>
+        <h2>Top 3 des cartes les plus chères</h2>
     </div>
 
-    <div class='containerSetCards2'>
-        <div id="setsList2"></div>
-        <div id="choicePokemon"></div>
+        <h2>Niveau de rareté</h2>
+
+    <div id="rareteCarte">
+
     </div>
 
-    <a href='#top' class="backtotop">
-        <i class="fas fa-arrow-circle-up"></i>
-    </a>
+    <button class="btnToggleDarkMode" onclick="darkMode()">Dark mode</button>
 
-    <script src="js/scriptBoosters.js"></script>
+    <script src="js/scriptStats.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

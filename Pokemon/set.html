@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 </head>
-<body>
+<body id="body">
 
     <!-------- HEADER -------->
 
@@ -18,13 +18,14 @@
             <a href="set.html">Card Sets</a>
             <a href="openbooster.html">Open Boosters</a>
             <a href="cardPrice.html">Card prices</a>
+            <a href="stats.html">Statistics</a>
         </div>
     </div>
 
     
     <!-------- BOUTON RETOUR -------->
 
-    <a href="set.html"><div class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
+    <a href="set.html"><div id="retour" class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
 
 
     <!-------- LISTE DE SETS & AFFICHAGE CARTES -------->
@@ -43,6 +44,9 @@
         <i class="fas fa-arrow-circle-up"></i>
     </a>
 
+    <button class="btnToggleDarkMode" onclick="darkMode()">Dark mode</button>
+
     <script src="js/scriptSet.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
