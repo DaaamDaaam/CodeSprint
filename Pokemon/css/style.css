@@ -161,6 +161,19 @@ img {
   cursor: pointer;
 }
 
+.btnReload {
+  width: 90%;
+  height: 5vh;
+  background-color: #5775BA;
+  color: white;
+  border: none;
+}
+
+.btnReload:hover {
+  background-color: #3858a3;
+  cursor: pointer;
+}
+
 /* ---------- AFFICHAGE CARTES DES SETS ---------- */
 
 #choicePokemon {

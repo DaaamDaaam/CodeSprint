@@ -9,8 +9,8 @@ submitHTML.addEventListener('click', function(event){
     fetch(`https://api.pokemontcg.io/v2/cards?q=supertype:pokemon name:${searchValue}`)
     .then(response => response.json())
     .then(data => {
+      cardContainerHTML.innerHTML = "";
         data.data.map(pokemon => {
-
             let priceMin = ""
             if(pokemon.tcgplayer) {
               if(pokemon.tcgplayer.prices.holofoil){

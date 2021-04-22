@@ -21,7 +21,13 @@ fetch("https://api.pokemontcg.io/v2/sets/")
         setsListHTML.remove();
         choicePokemonHTML.style.display = "flex";
         
-        fetch(`https://api.pokemontcg.io/v2/cards?q= set.id:${set.id}`)
+        loadChoicePokemon(set);
+      });
+    });
+  });
+
+async function loadChoicePokemon(set) {
+  fetch(`https://api.pokemontcg.io/v2/cards?q= set.id:${set.id}`)
           .then((response) => response.json())
           .then((data) => {
             pokemons = data.data;
@@ -30,15 +36,24 @@ fetch("https://api.pokemontcg.io/v2/sets/")
             let nbrCartes = set.total;
             console.log(nbrCartes)
 
+            choicePokemonHTML.innerHTML = "";
+
+            let reloadBtn = document.createElement("button");
+            reloadBtn.className = "btnReload";
+            reloadBtn.innerText = "Ouvrir un autre booster";
+            choicePokemonHTML.prepend(reloadBtn);
+
+            choicePokemonHTML.addEventListener("click", async function() {
+              await loadChoicePokemon(set);
+            });
+
             for(let i = 0; i < 10; i++) {
               var nbrCartesAleatoire = entierAleatoire(0, nbrCartes);
               showPokemon(pokemons[nbrCartesAleatoire]);
             }
 
           });
-      });
-    });
-  });
+}
 
 function entierAleatoire(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
