@@ -190,10 +190,15 @@ img {
 
 .btnReload {
   width: 90%;
-  height: 5vh;
-  background-color: #5775BA;
+  height: 7vh;
+  background-color: #F7B42D;;
   color: white;
   border: none;
+  margin-bottom: 5vh;
+  border-radius: 50px;
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .btnReload:hover {
@@ -325,6 +330,29 @@ img {
   background-color: rgb(40, 40, 40);
 }
 
+.dark-mode-header {
+  color: white;
+  background-color: black;
+}
+
+.dark-mode-header .logo {
+  color: #fff;
+}
+
+.dark-mode-header ul li a {
+  color: #fff;
+}
+
+.dark-mode-header .toggle {
+  background: url("../img/menu.png") no-repeat;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10000; 
+}
+
+/* ---------- HEADER ---------- */
 
 header
 {
@@ -340,7 +368,7 @@ header
 header .logo
 {
 	position: relative;
-	color: #fff;
+	color: black;
 	font-weight: 700;
 	font-size: 2em;
 	text-decoration: none;
@@ -360,7 +388,7 @@ header ul li{
 }
 
 header ul li a{
-	color: #fff;
+	color: black;
 	text-decoration: none;
 }
 
