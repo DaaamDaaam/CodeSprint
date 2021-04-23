@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon | Boosters</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    
+</head>
+<body id="bodyy">
+
+    <!-------- HEADER -------->
+
+    <header>
+        <a href="index.html" class="logo">Pokéda.</a>
+        <div class="toggle"></div>
+        <section class="navigation">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="carabooster.html">Cara Booster</a></li>
+                <li><a href="salaset.html">Sala Set</a></li>
+                <li><a href="pikaprice.html">Pika Price</a></li>
+            </ul>
+      </header>
+
+    
+    <!-------- BOUTON RETOUR -------->
+
+    <a href="carabooster.html"><div id="retour" class="boutonRetour"><i class="fas fa-arrow-circle-left"></i><p>Retour</p></div></a>
+
+
+    <!-------- LISTE DE SETS & AFFICHAGE CARTES -------->
+
+    <div class="titres">
+        <h1>Ouverture de booster</h1>
+        <h2>Choisissez une série de booster</h2>
+    </div>
+
+    <div class='containerSetCards2'>
+        <div id="setsList2"></div>
+        <div id="choicePokemon"></div>
+    </div>
+
+    <a href='#top' class="backtotop">
+        <i class="fas fa-arrow-circle-up"></i>
+    </a>
+
+    <button class="btnToggleDarkMode" onclick="darkMode()"><i class="fas fa-sun"></i> / <i class="fas fa-moon"></i></button>
+    
+    <script src="js/script.js"></script>
+    <script src="js/scriptBoosters.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
