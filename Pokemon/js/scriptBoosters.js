@@ -13,7 +13,7 @@ fetch("https://api.pokemontcg.io/v2/sets/")
       console.log(set);
       let card2 = document.createElement("div");
       card2.className = "card2";
-      card2.innerHTML = `<div class="setButton"><img class="imgSets" src="${set.images.logo}" alt=""/>
+      card2.innerHTML = `<div class="setButton" id="setBtn"><img class="imgSets" src="${set.images.logo}" alt=""/>
       <p style="margin-left: 20px">${set.name}</p></div>`;
       setsListHTML.append(card2);
       

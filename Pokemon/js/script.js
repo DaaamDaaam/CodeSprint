@@ -7,4 +7,7 @@ function darkMode() {
   
     var retour = document.getElementById("retour");
     retour.classList.toggle("dark-mode-retour");
+
+    var setButton = document.getElementById("setBtn");
+    setButton.classList.toggle("dark-mode-setButton");
   }
