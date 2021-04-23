@@ -314,7 +314,7 @@ img {
 }
 
 .dark-mode-html {
-  background-color: black;
+  background-color: #111;
 }
 
 .dark-mode-body {
@@ -333,7 +333,7 @@ img {
 
 .dark-mode-header {
   color: white;
-  background-color: black;
+  background-color: #111;
 }
 
 .dark-mode-header .logo {
@@ -369,7 +369,7 @@ header
 header .logo
 {
 	position: relative;
-	color: black;
+	color: #111;
 	font-weight: 700;
 	font-size: 2em;
 	text-decoration: none;
@@ -389,7 +389,7 @@ header ul li{
 }
 
 header ul li a{
-	color: black;
+	color: #111;
 	text-decoration: none;
 }
 
