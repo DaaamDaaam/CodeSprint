@@ -5,9 +5,10 @@ function darkMode() {
     var html = document.getElementById("html");
     html.classList.toggle("dark-mode-html");
   
+    var header = document.getElementById("headerMenu");
+    header.classList.toggle("dark-mode-header");
+    
     var retour = document.getElementById("retour");
     retour.classList.toggle("dark-mode-retour");
 
-    var header = document.getElementById("headerMenu");
-    header.classList.toggle("dark-mode-header");
   }
